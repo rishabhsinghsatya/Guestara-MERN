@@ -76,8 +76,8 @@ router.put("/categories/:categoryId", async (req, res) => {
     category.name = name || category.name;
     category.image = image || category.image;
     category.description = description || category.description;
-    category.taxApplicability = taxApplicability ?? category.taxApplicability;
-    category.tax = tax ?? category.tax;
+    category.taxApplicability = taxApplicability || category.taxApplicability;
+    category.tax = tax || category.tax;
     category.taxType = taxType || category.taxType;
 
     const updatedCategory = await category.save();
